@@ -3,325 +3,294 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rana Hamid Pharmacy</title>
+<title>Class Pharma</title>
 
-<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-    background:#f5f7fa;
+background:#f5f8fc;
+color:#333;
 }
 
 header{
-    background:#0b7a43;
-    color:#fff;
-    text-align:center;
-    padding:30px 20px;
+background:#0B8F4D;
+color:#fff;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
 .logo{
-    font-size:60px;
-}
-
-header h1{
-    margin-top:10px;
-    font-size:35px;
-}
-
-header p{
-    margin-top:10px;
-    font-size:18px;
-}
-
-nav{
-    background:#085d33;
-    position:sticky;
-    top:0;
-    z-index:1000;
-    text-align:center;
+font-size:28px;
+font-weight:bold;
 }
 
 nav a{
-    color:#fff;
-    text-decoration:none;
-    display:inline-block;
-    padding:15px 20px;
-    font-weight:bold;
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-weight:500;
 }
 
-nav a:hover{
-    background:#16a34a;
+.hero{
+background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url('https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=1600&q=80');
+background-size:cover;
+background-position:center;
+height:500px;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+padding:20px;
 }
 
-.search-box{
-    width:90%;
-    max-width:600px;
-    margin:30px auto;
+.hero h1{
+font-size:48px;
+margin-bottom:15px;
 }
 
-.search-box input{
-    width:100%;
-    padding:15px;
-    border:2px solid #0b7a43;
-    border-radius:50px;
-    font-size:16px;
+.hero p{
+font-size:20px;
+margin-bottom:25px;
 }
 
-.products{
-    width:95%;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-    padding:20px;
+.btn{
+display:inline-block;
+background:#FFD43B;
+color:#000;
+padding:14px 35px;
+border-radius:40px;
+text-decoration:none;
+font-weight:bold;
 }
 
-.product{
-    background:#fff;
-    border-radius:15px;
-    overflow:hidden;
-    box-shadow:0 5px 15px rgba(0,0,0,.15);
-    transition:.3s;
+section{
+padding:70px 8%;
 }
 
-.product:hover{
-    transform:translateY(-8px);
+.title{
+text-align:center;
+font-size:34px;
+margin-bottom:40px;
+color:#0B8F4D;
 }
 
-.product img{
-    width:100%;
-    height:200px;
-    object-fit:cover;
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
 }
 
-.product h3{
-    padding:15px 15px 5px;
-    color:#0b7a43;
+.about img{
+width:100%;
+border-radius:15px;
 }
 
-.product p{
-    padding:0 15px 15px;
+.about-text h2{
+margin-bottom:15px;
 }
 
-.btn-buy{
-    display:block;
-    background:#0b7a43;
-    color:#fff;
-    text-align:center;
-    padding:12px;
-    text-decoration:none;
-    font-weight:bold;
+.info{
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 0 15px rgba(0,0,0,.08);
+margin-top:25px;
 }
 
-.btn-buy:hover{
-    background:#16a34a;
+.info p{
+margin:10px 0;
+font-size:17px;
 }
+
+footer{
+background:#0B8F4D;
+color:white;
+text-align:center;
+padding:25px;
+margin-top:40px;
+}
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+}
+
+nav{
+margin-top:15px;
+}
+
+.hero h1{
+font-size:32px;
+}
+
+.about{
+grid-template-columns:1fr;
+}
+
+}
+
 </style>
-
 </head>
 
 <body>
 
 <header>
 
-<div class="logo">💊</div>
+<div class="logo">
+CLASS PHARMA
+</div>
 
-<h1>Rana Hamid Pharmacy</h1>
-
-<p>Trusted Online Medicine Store</p>
+<nav>
+<a href="#">Home</a>
+<a href="#">About</a>
+<a href="#">Medicines</a>
+<a href="#">Contact</a>
+</nav>
 
 </header>
 
-<nav>
+<section class="hero">
 
-<a href="#">Home</a>
+<div>
 
-<a href="#">Medicines</a>
+<h1>Welcome to Class Pharma</h1>
 
-<a href="#">Categories</a>
+<p>Your Trusted Pharmacy in Dhaka</p>
 
-<a href="#">About</a>
-
-<a href="#">Contact</a>
-
-</nav>
-
-<div class="search-box">
-
-<input type="text" placeholder="Search Medicine...">
+<a class="btn" href="#">View Medicines</a>
 
 </div>
 
-<div class="products">
+</section>
 
-<!-- Product 1 -->
+<section>
 
-<div class="product">
-<img src="https://via.placeholder.com/300x200?text=Napa+500">
+<h2 class="title">About Our Pharmacy</h2>
+
+<div class="about">
+
+<img src="https://images.unsplash.com/photo-1585435557343-3b092031a831?auto=format&fit=crop&w=1200&q=80">
+
+<div class="about-text">
+
+<h2>CLASS PHARMA</h2>
+
+<p>
+
+We provide genuine medicines, healthcare products, and quality pharmacy services with honesty and care.
+
+</p>
+
+<div class="info">
+
+<p><strong>Owner :</strong> Md. Al Amin</p>
+
+<p><strong>Pharmacy :</strong> Class Pharma</p>
+
+<p><strong>Address :</strong> Notun Bazar, 100 Feet, Bhatara, Gulshan-1212</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Class Pharma. All Rights Reserved.
+<section>
+
+<h2 class="title">Our Medicines</h2>
+
+<div style="text-align:center;margin-bottom:30px;">
+<input
+type="text"
+id="search"
+placeholder="Search Medicine..."
+style="width:100%;max-width:450px;padding:14px;border:2px solid #0B8F4D;border-radius:8px;font-size:16px;"
+onkeyup="searchMedicine()">
+</div>
+
+<div id="medicine-list" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;">
+
+<div class="info medicine">
 <h3>Napa 500 mg</h3>
 <p>Pain Relief Tablet</p>
-<a href="#" class="btn-buy">Details</a>
+<p><strong>Price:</strong> ৳15</p>
+<a class="btn" href="#">Buy Now</a>
 </div>
 
-<!-- Product 2 -->
-
-<div class="product">
-<img src="https://via.placeholder.com/300x200?text=Ace+500">
-<h3>Ace 500 mg</h3>
-<p>Paracetamol Tablet</p>
-<a href="#" class="btn-buy">Details</a>
-</div>
-
-<!-- Product 3 -->
-
-<div class="product">
-<img src="https://via.placeholder.com/300x200?text=Seclo+20">
+<div class="info medicine">
 <h3>Seclo 20 mg</h3>
-<p>Omeprazole Capsule</p>
-<a href="#" class="btn-buy">Details</a>
+<p>Acidity Medicine</p>
+<p><strong>Price:</strong> ৳70</p>
+<a class="btn" href="#">Buy Now</a>
 </div>
 
-<!-- Product 4 -->
-
-<div class="product">
-<img src="https://via.placeholder.com/300x200?text=Sergel+20">
-<h3>Sergel 20 mg</h3>
-<p>Esomeprazole Capsule</p>
-<a href="#" class="btn-buy">Details</a>
+<div class="info medicine">
+<h3>Ace 500 mg</h3>
+<p>Fever & Pain</p>
+<p><strong>Price:</strong> ৳12</p>
+<a class="btn" href="#">Buy Now</a>
 </div>
 
-<!-- Product 5 -->
-    
-    <!-- Product 6 -->
-<div class="product">
-<img src="https://via.placeholder.com/300x200?text=Maxpro+20">
-<h3>Maxpro 20 mg</h3>
-<p>Esomeprazole Capsule</p>
-<a href="#" class="btn-buy">Details</a>
+<div class="info medicine">
+<h3>Napa Extra</h3>
+<p>Headache Relief</p>
+<p><strong>Price:</strong> ৳20</p>
+<a class="btn" href="#">Buy Now</a>
 </div>
 
-<!-- Product 7 -->
-<div class="product">
-<img src="https://via.placeholder.com/300x200?text=Monas+10">
-<h3>Monas 10 mg</h3>
-<p>Montelukast Tablet</p>
-<a href="#" class="btn-buy">Details</a>
 </div>
 
-<!-- Product 8 -->
-<div class="product">
-<img src="https://via.placeholder.com/300x200?text=Fexo+120">
-<h3>Fexo 120 mg</h3>
-<p>Anti Allergy Tablet</p>
-<a href="#" class="btn-buy">Details</a>
-</div>
+</section>
 
-<!-- Product 9 -->
-<div class="product">
-<img src="https://via.placeholder.com/300x200?text=Fexo+180">
-<h3>Fexo 180 mg</h3>
-<p>Anti Allergy Tablet</p>
-<a href="#" class="btn-buy">Details</a>
-</div>
+<script>
 
-<!-- Product 10 -->
-<div class="product">
-<img src="https://via.placeholder.com/300x200?text=Napa+Extend">
-<h3>Napa Extend</h3>
-<p>Extended Release Tablet</p>
-<a href="#" class="btn-buy">Details</a>
-</div>
+function searchMedicine(){
 
-<!-- Product 11 -->
-<div class="product">
-<img src="https://via.placeholder.com/300x200?text=Ace+Plus">
-<h3>Ace Plus</h3>
-<p>Pain Relief Tablet</p>
-<a href="#" class="btn-buy">Details</a>
-</div>
+let input=document.getElementById("search").value.toLowerCase();
 
-<!-- Product 12 -->
-<div class="product">
-<img src="https://via.placeholder.com/300x200?text=Cef-3">
-<h3>Cef-3 200 mg</h3>
-<p>Antibiotic Tablet</p>
-<a href="#" class="btn-buy">Details</a>
-</div>
+let medicines=document.getElementsByClassName("medicine");
 
-<!-- Product 13 -->
-<div class="product">
-<img src="https://via.placeholder.com/300x200?text=Azyth+500">
-<h3>Azyth 500 mg</h3>
-<p>Azithromycin Tablet</p>
-<a href="#" class="btn-buy">Details</a>
-</div>
+for(let i=0;i<medicines.length;i++){
 
-<!-- Product 14 -->
-<div class="product">
-<img src="https://via.placeholder.com/300x200?text=Flazyl">
-<h3>Flazyl 400 mg</h3>
-<p>Metronidazole Tablet</p>
-<a href="#" class="btn-buy">Details</a>
-</div>
+let name=medicines[i].innerText.toLowerCase();
 
-<!-- Product 15 -->
-<div class="product">
-<img src="https://via.placeholder.com/300x200?text=ORS">
-<h3>ORS</h3>
-<p>Oral Rehydration Salts</p>
-<a href="#" class="btn-buy">Details</a>
-</div>
+if(name.indexOf(input)>-1){
 
-<!-- Product 16 -->
-<div class="product">
-<img src="https://via.placeholder.com/300x200?text=Calbo-D">
-<h3>Calbo-D</h3>
-<p>Calcium + Vitamin D</p>
-<a href="#" class="btn-buy">Details</a>
-</div>
+medicines[i].style.display="block";
 
-<!-- Product 17 -->
-<div class="product">
-<img src="https://via.placeholder.com/300x200?text=Ostocal-D">
-<h3>Ostocal-D</h3>
-<p>Calcium Supplement</p>
-<a href="#" class="btn-buy">Details</a>
-</div>
+}else{
 
-<!-- Product 18 -->
-<div class="product">
-<img src="https://via.placeholder.com/300x200?text=Zinc+B">
-<h3>Zinc B</h3>
-<p>Zinc Supplement</p>
-<a href="#" class="btn-buy">Details</a>
-</div>
+medicines[i].style.display="none";
 
-<!-- Product 19 -->
-<div class="product">
-<img src="https://via.placeholder.com/300x200?text=Histalex">
-<h3>Histalex</h3>
-<p>Antihistamine Syrup</p>
-<a href="#" class="btn-buy">Details</a>
-</div>
+}
 
-<!-- Product 20 -->
-<div class="product">
-<img src="https://via.placeholder.com/300x200?text=Losectil">
-<h3>Losectil 20 mg</h3>
-<p>Omeprazole Capsule</p>
-<a href="#" class="btn-buy">Details</a>
-</div>
+}
 
-<div class="product">
-<img src="https://via.placeholder.com/300x200?text=Ceevit">
-<h3>Ceevit</h3>
-<p>Vitamin C Tablet</p>
-<a href="#" class="btn-buy">Details</a>
-</div>
+}
+
+</script>
+</footer>
+
+</body>
+</html>
