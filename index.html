@@ -1,122 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Pharma - Your Trusted Pharmacy</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #0e8388;
+            --secondary-color: #2e4f4f;
+            --accent-color: #e55807;
+            --bg-light: #f8f9fa;
+            --text-color: #2c3e50;
+        }
 
-  © 2026<footer>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
 
-<h2>CLASS PHARMA</h2>
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
 
-<p>Trusted Pharmacy Service in Dhaka</p>
+        /* Header / Navbar */
+        header {
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-<br>
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+        }
 
-<p>
-📍 Notun Bazar, 100 Feet, vatara, Gulshan 1212
-</p>
+        .logo-area h1 {
+            color: var(--primary-color);
+            font-size: 26px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
-<p>
-📞 Phone: 01741687742
-</p>
+        .logo-area span {
+            color: var(--accent-color);
+        }
 
-<p>
-✉ Email: classpharma@gmail.com
-</p>
+        .call-btn {
+            background: var(--primary-color);
+            color: white;
+            padding: 10px 22px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.3s;
+        }
 
-<br>
+        .call-btn:hover {
+            background: var(--secondary-color);
+        }
 
-<div>
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(14, 131, 136, 0.9), rgba(46, 79, 79, 0.9)), url('https://images.unsplash.com/photo-1586015555751-63bb77f4322a?auto=format&fit=crop&q=80&w=1000') center/cover;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
 
-<a href="#" style="color:white;text-decoration:none;margin:10px;">
-Facebook
-</a>
+        .hero h2 {
+            font-size: 38px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
 
-<a href="#" style="color:white;text-decoration:none;margin:10px;">
-WhatsApp
-</a>
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 25px auto;
+            opacity: 0.9;
+        }
 
-</div>
+        .hero .owner-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 20px;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+            font-size: 16px;
+        }
 
-<br>
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
 
-<p>
-© 2026 Class Pharma. All Rights Reserved.
-</p>
+        /* Features Section */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
 
-</footer>
-</footer>
-<section>
-<section>
+        .feature-card {
+            background: white;
+            padding: 30px 20px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
 
-<h2 class="title">Our Services</h2>
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
 
-<div class="products">
+        .feature-card i {
+            font-size: 40px;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
 
-<div class="info">
-<h3>💊 Genuine Medicines</h3>
-<p>We provide authentic and quality medicines.</p>
-</div>
+        .feature-card h3 {
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+            font-size: 20px;
+        }
 
-<div class="info">
-<h3>🚚 Home Delivery</h3>
-<p>Fast medicine delivery service for customers.</p>
-</div>
+        .feature-card p {
+            font-size: 14px;
+            color: #666;
+        }
 
-<div class="info">
-<h3>👨‍⚕️ Healthcare Support</h3>
-<p>Professional pharmacy support and guidance.</p>
-</div>
+        /* Info Grid */
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
 
-</div>
+        .info-box h3 {
+            color: var(--primary-color);
+            font-size: 22px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
 
-</section>
-<h2 class="title">Contact Us</h2>
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
 
-<div class="info">
+        .info-item i {
+            font-size: 20px;
+            color: var(--accent-color);
+            margin-top: 4px;
+        }
 
-<p><b>Pharmacy Name:</b> Class Pharma</p>
+        .info-item div h4 {
+            margin-bottom: 3px;
+            font-size: 16px;
+            color: var(--secondary-color);
+        }
 
-<p><b>Owner:</b> মোঃ আল আমিন</p>
+        .info-item div p {
+            color: #666;
+            font-size: 14px;
+        }
 
-<p><b>Address:</b> নতুন বাজার, ১০০ ফিট, ভাটারা, গুলশান-১২১২</p>
+        /* Order Box */
+        .order-cta {
+            background: linear-gradient(135deg, #e55807, #ff8400);
+            color: white;
+            padding: 35px 20px;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 40px;
+        }
 
-<p><b>Phone:</b> 01XXXXXXXXX</p>
+        .order-cta h3 {
+            font-size: 26px;
+            margin-bottom: 10px;
+        }
 
-<br>
+        .order-cta p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
 
-<a class="btn" href="https://wa.me/8801XXXXXXXXX" target="_blank">
-Order on WhatsApp
-</a>
+        .order-btn {
+            display: inline-block;
+            background: white;
+            color: var(--accent-color);
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
 
-</div>
+        .order-btn:hover {
+            background: var(--secondary-color);
+            color: white;
+        }
 
-</section>
+        /* Footer */
+        footer {
+            background: var(--secondary-color);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
 
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero h2 {
+                font-size: 28px;
+            }
+            .hero p {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
 
-<section>
+    <!-- Header -->
+    <header>
+        <div class="navbar">
+            <div class="logo-area">
+                <h1><i class="fa-solid fa-prescription-bottle-medical"></i> Class <span>Pharma</span></h1>
+            </div>
+            <a href="tel:01741687742" class="call-btn">
+                <i class="fa-solid fa-phone"></i> Call Now
+            </a>
+        </div>
+    </header>
 
-<h2 class="title">Find Our Location</h2>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Your Trusted Healthcare Partner</h2>
+        <p>Committed to providing 100% genuine medicines and healthcare essentials right when you need them.</p>
+        <div class="owner-badge">
+            <i class="fa-solid fa-user-doctor"></i> Proprietor: <strong>Al Amin</strong>
+        </div>
+    </section>
 
-<div style="text-align:center;">
+    <!-- Main Container -->
+    <div class="container">
+        
+        <!-- Features -->
+        <div class="features">
+            <div class="feature-card">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h3>100% Authentic Medicine</h3>
+                <p>We source all products directly from authorized manufacturers and official distributors.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fa-solid fa-truck-fast"></i>
+                <h3>Fast Home Delivery</h3>
+                <p>Quick and efficient local delivery across Nutun Bazar and surrounding areas.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fa-solid fa-clock"></i>
+                <h3>Reliable Service</h3>
+                <p>Always ready to assist you with dedicated customer support and guidance.</p>
+            </div>
+        </div>
 
-<iframe
-src="https://maps.google.com/maps?q=Notun%20Bazar%20Bhatara%20Dhaka&t=&z=15&ie=UTF8&iwloc=&output=embed"
-width="100%"
-height="350"
-style="border:0;border-radius:12px;"
-allowfullscreen=""
-loading="lazy">
-</iframe>
+        <!-- Info Grid -->
+        <div class="info-grid">
+            
+            <!-- Contact Details -->
+            <div class="info-box">
+                <h3><i class="fa-solid fa-address-card"></i> Contact Details</h3>
+                
+                <div class="info-item">
+                    <i class="fa-solid fa-store"></i>
+                    <div>
+                        <h4>Pharmacy Name</h4>
+                        <p>Class Pharma</p>
+                    </div>
+                </div>
 
-</div>
+                <div class="info-item">
+                    <i class="fa-solid fa-user"></i>
+                    <div>
+                        <h4>Proprietor</h4>
+                        <p>Al Amin</p>
+                    </div>
+                </div>
 
-</section>
-<script>
-function searchMedicine(){
-let input=document.getElementById("search").value.toLowerCase();
-let medicines=document.getElementsByClassName("product");
-for(let i=0;i<medicines.length;i++){
-let name=medicines[i].innerText.toLowerCase();
-medicines[i].style.display=name.indexOf(input)>-1?"block":"none";
-}
-}
-</script>
+                <div class="info-item">
+                    <i class="fa-solid fa-phone-volume"></i>
+                    <div>
+                        <h4>Mobile Number</h4>
+                        <p><a href="tel:01741687742" style="color: inherit; text-decoration: none;"><b>+880 1741-687742</b></a></p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <h4>Address</h4>
+                        <p>Nutun Bazar 100 Feet, Vatara, Dhaka 1212</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Our Services -->
+            <div class="info-box">
+                <h3><i class="fa-solid fa-notes-medical"></i> Our Services</h3>
+                
+                <div class="info-item">
+                    <i class="fa-solid fa-check-circle"></i>
+                    <div>
+                        <h4>Local & Foreign Medicines</h4>
+                        <p>A complete inventory of prescription and OTC medications available.</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <i class="fa-solid fa-check-circle"></i>
+                    <div>
+                        <h4>Baby Care & Surgical Items</h4>
+                        <p>High-quality baby care products and essential medical equipment.</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <i class="fa-solid fa-check-circle"></i>
+                    <div>
+                        <h4>Health Monitoring</h4>
+                        <p>On-site blood pressure checking and basic health consultation.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Order CTA -->
+        <div class="order-cta">
+            <h3>Order Medicine or Get Consultation</h3>
+            <p>Send your prescription via WhatsApp or call us directly</p>
+            <a href="tel:01741687742" class="order-btn"><i class="fa-solid fa-phone"></i> 01741687742</a>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Class Pharma. All rights reserved. | Nutun Bazar, Dhaka</p>
+    </footer>
 
 </body>
 </html>
