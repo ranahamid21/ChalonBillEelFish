@@ -1,1 +1,228 @@
 index.html
+DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class Pharma</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f5f7fa;
+    color:#333;
+}
+
+header{
+    background:#0b7a43;
+    color:#fff;
+    padding:20px;
+    text-align:center;
+}
+
+nav{
+    background:#085d33;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+    padding:15px 20px;
+}
+
+nav a:hover{
+    background:#0b7a43;
+}
+
+.hero{
+    padding:80px 20px;
+    text-align:center;
+    background:linear-gradient(to right,#0b7a43,#16a34a);
+    color:white;
+}
+
+.hero h1{
+    font-size:38px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+section{
+    max-width:1100px;
+    margin:auto;
+    padding:50px 20px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+footer{
+    background:#0b7a43;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+    <h1>Class Pharma</h1>
+    <p>Healthcare for a Better Tomorrow</p>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Products</a>
+    <a href="#">Quality</a>
+    <a href="#">Contact</a>
+</nav>
+
+<div class="hero">
+    <h1>Welcome to Class Pharma</h1>
+    <p>Committed to Quality, Safety & Innovation.</p>
+</div>
+
+<section>
+    <div class="card">
+        <h2>About Us</h2>
+        <br>
+        <p>
+            Welcome to Class Pharma. We are committed to providing
+            high-quality pharmaceutical products and healthcare solutions.
+            Our mission is to improve lives through innovation, quality,
+            and customer satisfaction.
+        </p>
+    </div>
+</<section>
+
+<div class="card">
+    <h2>About Class Pharma</h2>
+    <br>
+    <p>
+        Class Pharma is committed to manufacturing and supplying
+        quality pharmaceutical products to improve healthcare.
+    </p>
+</div>
+
+<br><br>
+
+<h2 align="center">Our Products</h2>
+<br>
+
+<input type="text" id="search" placeholder="Search Medicine..."
+style="width:100%;padding:12px;font-size:16px;border:1px solid #ccc;border-radius:8px;">
+
+<br><br>
+
+<div id="medicineList">
+
+<div class="card medicine">
+<h3>Napa 500 mg</h3>
+<p>Pain Relief Tablet</p>
+</div>
+
+<br>
+
+<div class="card medicine">
+<h3>Ace 500 mg</h3>
+<p>Paracetamol Tablet</p>
+</div>
+
+<br>
+
+<div class="card medicine">
+<h3>Seclo 20 mg</h3>
+<p>Omeprazole Capsule</p>
+</div>
+
+<br>
+
+<div class="card medicine">
+<h3>Ceevit</h3>
+<p>Vitamin C Tablet</p>
+</div>
+
+</div>
+
+</section>
+
+<script>
+const search=document.getElementById("search");
+
+search.addEventListener("keyup",function(){
+
+let value=this.value.toLowerCase();
+
+let medicines=document.querySelectorAll(".medicine");
+
+medicines.forEach(function(item){
+
+let text=item.innerText.toLowerCase();
+
+if(text.indexOf(value)>-1){
+item.style.display="block";
+}else{
+item.style.display="none";
+}
+
+});
+
+});
+</script>>
+
+<footer>
+    © 2026 Class Pharma. All Rights Reserved.
+</footer>
+<!-- Contact Section -->
+<section id="contact">
+
+<h2 style="text-align:center;margin-bottom:20px;">Contact Us</h2>
+
+<div class="card">
+
+<p><strong>Company:</strong> Class Pharma</p>
+<p><strong>Address:</strong> Dhaka, Bangladesh</p>
+<p><strong>Phone:</strong> +8801XXXXXXXXX</p>
+<p><strong>Email:</strong> info@classpharma.com</p>
+
+</div>
+
+</section>
+
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/8801XXXXXXXXX"
+style="
+position:fixed;
+right:20px;
+bottom:20px;
+background:#25D366;
+color:white;
+padding:15px 18px;
+border-radius:50%;
+text-decoration:none;
+font-size:24px;
+box-shadow:0 5px 10px rgba(0,0,0,.3);
+">
+💬
+</a>
+</body>
+      </html>
