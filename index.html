@@ -5,17 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Class Pharma</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+font-family:Poppins,sans-serif;
 }
 
 body{
@@ -25,55 +22,54 @@ color:#333;
 
 header{
 background:#0B8F4D;
-color:#fff;
 padding:18px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
+color:#fff;
+position:sticky;
+top:0;
 }
 
 .logo{
 font-size:28px;
-font-weight:bold;
+font-weight:700;
 }
 
 nav a{
-color:white;
+color:#fff;
 text-decoration:none;
 margin-left:20px;
-font-weight:500;
 }
 
 .hero{
+height:500px;
 background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url('https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=1600&q=80');
 background-size:cover;
 background-position:center;
-height:500px;
 display:flex;
 justify-content:center;
 align-items:center;
 text-align:center;
 color:white;
-padding:20px;
 }
 
 .hero h1{
 font-size:48px;
-margin-bottom:15px;
 }
 
 .hero p{
+margin:15px 0;
 font-size:20px;
-margin-bottom:25px;
 }
 
 .btn{
 display:inline-block;
 background:#FFD43B;
-color:#000;
 padding:14px 35px;
-border-radius:40px;
 text-decoration:none;
+border-radius:30px;
+color:#000;
 font-weight:bold;
 }
 
@@ -97,203 +93,17 @@ align-items:center;
 
 .about img{
 width:100%;
-border-radius:15px;
-}
-
-.about-text h2{
-margin-bottom:15px;
+border-radius:12px;
 }
 
 .info{
-background:white;
-padding:30px;
-border-radius:12px;
-box-shadow:0 0 15px rgba(0,0,0,.08);
-margin-top:25px;
-}
-
-.info p{
-margin:10px 0;
-font-size:17px;
-}
-
-footer{
-background:#0B8F4D;
-color:white;
-text-align:center;
+background:#fff;
 padding:25px;
-margin-top:40px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+margin-top:20px;
 }
 
-@media(max-width:768px){
-
-header{
-flex-direction:column;
-}
-
-nav{
-margin-top:15px;
-}
-
-.hero h1{
-font-size:32px;
-}
-
-.about{
-grid-template-columns:1fr;
-}
-
-}
-
-</style>
-</head>
-
-<body>
-
-<header>
-
-<div class="logo">
-CLASS PHARMA
-</div>
-
-<nav>
-<a href="#">Home</a>
-<a href="#">About</a>
-<a href="#">Medicines</a>
-<a href="#">Contact</a>
-</nav>
-
-</header>
-
-<section class="hero">
-
-<div>
-
-<h1>Welcome to Class Pharma</h1>
-
-<p>Your Trusted Pharmacy in Dhaka</p>
-
-<a class="btn" href="#">View Medicines</a>
-
-</div>
-
-</section>
-
-<section>
-
-<h2 class="title">About Our Pharmacy</h2>
-
-<div class="about">
-
-<img src="https://images.unsplash.com/photo-1585435557343-3b092031a831?auto=format&fit=crop&w=1200&q=80">
-
-<div class="about-text">
-
-<h2>CLASS PHARMA</h2>
-
-<p>
-
-We provide genuine medicines, healthcare products, and quality pharmacy services with honesty and care.
-
-</p>
-
-<div class="info">
-
-<p><strong>Owner :</strong> Md. Al Amin</p>
-
-<p><strong>Pharmacy :</strong> Class Pharma</p>
-
-<p><strong>Address :</strong> Notun Bazar, 100 Feet, Bhatara, Gulshan-1212</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<footer>
-
-© 2026 Class Pharma. All Rights Reserved.
-<section>
-
-<h2 class="title">Our Medicines</h2>
-
-<div style="text-align:center;margin-bottom:30px;">
-<input
-type="text"
-id="search"
-placeholder="Search Medicine..."
-style="width:100%;max-width:450px;padding:14px;border:2px solid #0B8F4D;border-radius:8px;font-size:16px;"
-onkeyup="searchMedicine()">
-</div>
-
-<div id="medicine-list" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;">
-
-<div class="info medicine">
-<h3>Napa 500 mg</h3>
-<p>Pain Relief Tablet</p>
-<p><strong>Price:</strong> ৳15</p>
-<a class="btn" href="#">Buy Now</a>
-</div>
-
-<div class="info medicine">
-<h3>Seclo 20 mg</h3>
-<p>Acidity Medicine</p>
-<p><strong>Price:</strong> ৳70</p>
-<a class="btn" href="#">Buy Now</a>
-</div>
-
-<div class="info medicine">
-<h3>Ace 500 mg</h3>
-<p>Fever & Pain</p>
-<p><strong>Price:</strong> ৳12</p>
-<a class="btn" href="#">Buy Now</a>
-</div>
-
-<div class="info medicine">
-<h3>Napa Extra</h3>
-<p>Headache Relief</p>
-<p><strong>Price:</strong> ৳20</p>
-<a class="btn" href="#">Buy Now</a>
-</div>
-
-</div>
-
-</section>
-
-<script>
-
-function searchMedicine(){
-
-let input=document.getElementById("search").value.toLowerCase();
-
-let medicines=document.getElementsByClassName("medicine");
-
-for(let i=0;i<medicines.length;i++){
-
-let name=medicines[i].innerText.toLowerCase();
-
-if(name.indexOf(input)>-1){
-
-medicines[i].style.display="block";
-
-}else{
-
-medicines[i].style.display="none";
-
-}
-
-}
-
-}
-
-</script>
-</footer>
-
-</body>
-</html>
 .products{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -327,3 +137,287 @@ color:green;
 font-weight:bold;
 margin:10px 0;
 }
+
+footer{
+background:#0B8F4D;
+color:#fff;
+text-align:center;
+padding:25px;
+margin-top:50px;
+}
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+}
+
+nav{
+margin-top:15px;
+}
+
+.about{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:32px;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">CLASS PHARMA</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">About</a>
+<a href="#">Medicines</a>
+<a href="#">Contact</a>
+</nav>
+</header>
+
+<section class="hero">
+<div>
+<h1>Welcome To Class Pharma</h1>
+<p>Your Trusted Pharmacy in Dhaka</p>
+<a class="btn" href="#">View Medicines</a>
+</div>
+</section>
+
+<section>
+
+<h2 class="title">About Us</h2>
+
+<div class="about">
+
+<img src="https://images.unsplash.com/photo-1585435557343-3b092031a831?auto=format&fit=crop&w=1200&q=80">
+
+<div>
+
+<h2>Class Pharma</h2>
+
+<p>We provide genuine medicines and healthcare products with trusted pharmacy services.</p>
+
+<div class="info">
+
+<p><b>Owner:</b> Md.Al-Amin</p>
+
+<p><b>Address:</b> Notun Bazar, 100 Feet, Vatara, Gulshan 1212</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<section>
+<div style="text-align:center;margin-bottom:35px;">
+
+<a class="btn" href="#">Tablet</a>
+
+<a class="btn" href="#" style="margin-left:10px;">
+Capsule
+</a>
+
+<a class="btn" href="#" style="margin-left:10px;">
+Syrup
+</a>
+
+<a class="btn" href="#" style="margin-left:10px;">
+Healthcare
+</a>
+
+</div>
+<h2 class="title">Our Medicines</h2>
+
+<div style="text-align:center;margin-bottom:30px;">
+<input
+type="text"
+id="search"
+placeholder="Search Medicine..."
+style="width:100%;max-width:450px;padding:14px;border:2px solid #0B8F4D;border-radius:8px;font-size:16px;"
+onkeyup="searchMedicine()">
+</div>
+
+<div id="medicine-list" class="products">
+
+<div class="product">
+<img src="https://via.placeholder.com/400x250?text=Napa+500">
+<div class="product-content">
+<h3>Napa 500 mg</h3>
+<p><b>Company:</b> Beximco Pharma</p>
+<p><b>Category:</b> Pain Relief</p>
+<p><b>Price:</b> ৳15</p>
+<p class="stock">In Stock</p>
+<a class="btn" href="#">Buy Now</a>
+</div>
+</div>
+
+<div class="product">
+<img src="https://via.placeholder.com/400x250?text=Seclo+20">
+<div class="product-content">
+<h3>Seclo 20 mg</h3>
+<p><b>Company:</b> Square Pharma</p>
+<p><b>Category:</b> Gastric</p>
+<p><b>Price:</b> ৳70</p>
+<p class="stock">In Stock</p>
+<a class="btn" href="#">Buy Now</a>
+</div>
+</div>
+
+<div class="product">
+<img src="https://via.placeholder.com/400x250?text=Ace+500">
+<div class="product-content">
+<h3>Ace 500 mg</h3>
+<p><b>Company:</b> Square Pharma</p>
+<p><b>Category:</b> Fever & Pain</p>
+<p><b>Price:</b> ৳12</p>
+<p class="stock">In Stock</p>
+<a class="btn" href="#">Buy Now</a>
+</div>
+</div>
+
+<div class="product">
+<img src="https://via.placeholder.com/400x250?text=Napa+Extra">
+<div class="product-content">
+<h3>Napa Extra</h3>
+<p><b>Company:</b> Beximco Pharma</p>
+<p><b>Category:</b> Pain Relief</p>
+<p><b>Price:</b> ৳20</p>
+<p class="stock">In Stock</p>
+<a class="btn" href="#">Buy Now</a>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+© 202<footer>
+
+<h2>CLASS PHARMA</h2>
+
+<p>Trusted Pharmacy Service in Dhaka</p>
+
+<br>
+
+<p>
+📍 নতুন বাজার, ১০০ ফিট, ভাটারা, গুলশান-১২১২
+</p>
+
+<p>
+📞 Phone: 01741687742
+</p>
+
+<p>
+✉ Email: classpharma@gmail.com
+</p>
+
+<br>
+
+<div>
+
+<a href="#" style="color:white;text-decoration:none;margin:10px;">
+Facebook
+</a>
+
+<a href="#" style="color:white;text-decoration:none;margin:10px;">
+WhatsApp
+</a>
+
+</div>
+
+<br>
+
+<p>
+© 2026 Class Pharma. All Rights Reserved.
+</p>
+
+</footer>
+</footer>
+<section>
+<section>
+
+<h2 class="title">Our Services</h2>
+
+<div class="products">
+
+<div class="info">
+<h3>💊 Genuine Medicines</h3>
+<p>We provide authentic and quality medicines.</p>
+</div>
+
+<div class="info">
+<h3>🚚 Home Delivery</h3>
+<p>Fast medicine delivery service for customers.</p>
+</div>
+
+<div class="info">
+<h3>👨‍⚕️ Healthcare Support</h3>
+<p>Professional pharmacy support and guidance.</p>
+</div>
+
+</div>
+
+</section>
+<h2 class="title">Contact Us</h2>
+
+<div class="info">
+
+<p><b>Pharmacy Name:</b> Class Pharma</p>
+
+<p><b>Owner:</b> মোঃ আল আমিন</p>
+
+<p><b>Address:</b> নতুন বাজার, ১০০ ফিট, ভাটারা, গুলশান-১২১২</p>
+
+<p><b>Phone:</b> 01XXXXXXXXX</p>
+
+<br>
+
+<a class="btn" href="https://wa.me/8801XXXXXXXXX" target="_blank">
+Order on WhatsApp
+</a>
+
+</div>
+
+</section>
+
+
+<section>
+
+<h2 class="title">Find Our Location</h2>
+
+<div style="text-align:center;">
+
+<iframe
+src="https://maps.google.com/maps?q=Notun%20Bazar%20Bhatara%20Dhaka&t=&z=15&ie=UTF8&iwloc=&output=embed"
+width="100%"
+height="350"
+style="border:0;border-radius:12px;"
+allowfullscreen=""
+loading="lazy">
+</iframe>
+
+</div>
+
+</section>
+<script>
+function searchMedicine(){
+let input=document.getElementById("search").value.toLowerCase();
+let medicines=document.getElementsByClassName("product");
+for(let i=0;i<medicines.length;i++){
+let name=medicines[i].innerText.toLowerCase();
+medicines[i].style.display=name.indexOf(input)>-1?"block":"none";
+}
+}
+</script>
+
+</body>
+</html>
